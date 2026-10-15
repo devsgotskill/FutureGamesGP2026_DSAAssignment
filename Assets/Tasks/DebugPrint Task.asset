@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8befb5ae1445bba8af71ae2821eb5, type: 3}
   m_Name: DebugPrint Task
   m_EditorClassIdentifier: Assembly-CSharp::Environment.Tasks.DebugPrintTask
-  textToPrint: Hi, I'm a test task!
+  textToPrint: Test A
