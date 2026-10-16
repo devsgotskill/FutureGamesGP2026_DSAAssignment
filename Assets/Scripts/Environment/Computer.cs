@@ -1,6 +1,9 @@
 ﻿using Environment.Tasks;
-using UnityEngine;
+using NUnit.Framework;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Environment
 {
@@ -19,11 +22,16 @@ namespace Environment
         }
         public void OnInteract()
         {
+            if(taskStack.IsEmpty())
+            {
+                throw new Exception("No more tasks to execute.");
+            }
             if(!taskStack.IsEmpty())
             {
                 Task task = taskStack.Pop();
                 task.Execute();
-            }
+            } 
         }
+
     }
 }

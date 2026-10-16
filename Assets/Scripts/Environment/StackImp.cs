@@ -1,13 +1,14 @@
-using UnityEngine;
-using System.Collections.Generic;
 using Environment.Tasks;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Stackimp<T>
 {
     [SerializeField]
     public List<T> stack;
-    public T[] items;
-    private int top;
+    public T[] items = new T[10];
+    private int top = -1;
     public void Push(T item)
     {
         top++;
@@ -15,9 +16,13 @@ public class Stackimp<T>
     }
     public T Pop()
     {
+        if(top == -1)
+        {
+            throw new Exception("No more tasks to execute.");
+        }
         T item = items[top];
         top--;
-        return item;
+        return item; 
     }
 
     public void Peek(T item)
