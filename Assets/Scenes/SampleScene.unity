@@ -5643,18 +5643,22 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ff03f0eefaebe9e40aa1e0d120fb14ac, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: tasks.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'tasks.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: ff03f0eefaebe9e40aa1e0d120fb14ac, type: 2}
+      objectReference: {fileID: 11400000, guid: 787afe93cbc534d4e818c299b2d196e7, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'tasks.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 8a5c68b0813fd654c8a7845edc0714bf, type: 2}
+      objectReference: {fileID: 11400000, guid: d8cb10debc38eda419b5cb28f0177265, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'tasks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 197c734c9e07aa74ab03287592caa942, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'tasks.Array.data[3]'
       value: 
       objectReference: {fileID: 11400000, guid: 197c734c9e07aa74ab03287592caa942, type: 2}
     - target: {fileID: 5694532769315531512, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
