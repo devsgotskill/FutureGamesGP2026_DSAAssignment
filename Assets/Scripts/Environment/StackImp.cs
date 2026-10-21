@@ -15,16 +15,6 @@ public class Stackimp<T>
         top++;
         items[top] = item;
     }
-    public T Pop()
-    {
-        if(top == -1)
-        {
-            throw new Exception("No more tasks to execute.");
-        }
-        T item = items[top];
-        top--;
-        return item; 
-    }
 
     public void Peek(T item)
     {
