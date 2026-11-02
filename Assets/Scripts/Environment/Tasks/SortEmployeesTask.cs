@@ -11,7 +11,7 @@ namespace Environment.Tasks
         {
             if(insertTask == null || insertTask.employees == null)
             {
-                Debug.LogError("No Insert Employees Task assigned or employees list is empty!");
+                Debug.LogError("No Insert Employees Task or Employees List Empty!");
                 return;
             }
             Employee[] empArray = insertTask.employees;
