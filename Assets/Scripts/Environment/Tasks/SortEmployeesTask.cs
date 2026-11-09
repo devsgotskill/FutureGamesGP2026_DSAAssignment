@@ -6,7 +6,7 @@ namespace Environment.Tasks
     public class SortEmployeesTask : Task
     {
         [SerializeField]
-        private InsertEmployeesTask insertTask;
+        public InsertEmployeesTask insertTask;
         public override void Execute()
         {
             if(insertTask == null || insertTask.employees == null)
