@@ -10,7 +10,6 @@ namespace Environment.Tasks
         public TreeNode left;
         public TreeNode right;
         public int height = 1;
-
         public TreeNode(Employee employee, DateTime time)
         {
             this.employee = employee;
@@ -21,13 +20,11 @@ namespace Environment.Tasks
     {
         public TreeNode root;
         public int count = 0;
-
         public void Insert(Employee employee)
         {
             DateTime time = DateTime.Parse(employee.lastEntranceInEngineRoom);
             root = InsertNode(root, employee, time);
         }
-
         private TreeNode InsertNode(TreeNode node, Employee employee, DateTime time)
         {
             if(node == null)
@@ -35,13 +32,11 @@ namespace Environment.Tasks
                 count++;
                 return new TreeNode(employee, time);
             }
-
             int comparison = time.CompareTo(node.time);
             if(comparison == 0)
             {
                 comparison = employee.employeeId.CompareTo(node.employee.employeeId);
             }
-
             if(comparison < 0)
             {
                 node.left = InsertNode(node.left, employee, time);
@@ -54,7 +49,6 @@ namespace Environment.Tasks
             {
                 return node;
             }
-
             return Balance(node);
         }
         public Employee FindLast()
@@ -70,7 +64,6 @@ namespace Environment.Tasks
             }
             return node.employee;
         }
-
         public Employee FindFirst()
         {
             if(root == null)
@@ -84,7 +77,6 @@ namespace Environment.Tasks
             }
             return node.employee;
         }
-
         public Employee FindByTime(DateTime time)
         {
             TreeNode node = root;
@@ -106,12 +98,10 @@ namespace Environment.Tasks
             }
             return null;
         }
-
         public int GetTreeHeight()
         {
             return GetHeight(root);
         }
-
         private int GetHeight(TreeNode node)
         {
             if(node == null)
@@ -120,12 +110,10 @@ namespace Environment.Tasks
             }
             return node.height;
         }
-
         private void UpdateHeight(TreeNode node)
         {
             node.height = 1 + Math.Max(GetHeight(node.left), GetHeight(node.right));
         }
-
         private TreeNode Balance(TreeNode node)
         {
             UpdateHeight(node);
