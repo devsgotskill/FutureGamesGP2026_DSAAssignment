@@ -8,7 +8,6 @@ namespace Environment.Tasks
         [SerializeField]
         public InsertEmployeesTask insertTask;
         public EmployeeTree tree;
-
         public override void Execute()
         {
             if(insertTask == null || insertTask.employees == null)
@@ -19,7 +18,6 @@ namespace Environment.Tasks
             tree = BuildTree(insertTask.employees);
             Debug.Log("Tree built with " + tree.count + " employees, height " + tree.GetTreeHeight());
         }
-
         public static EmployeeTree BuildTree(Employee[] employees)
         {
             EmployeeTree newTree = new EmployeeTree();
