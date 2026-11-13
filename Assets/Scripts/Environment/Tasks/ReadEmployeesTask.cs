@@ -7,7 +7,7 @@ public class ReadEmployeesTask : Task
     [SerializeField] public InsertEmployeesTask insertTask;
     public override void Execute()
     {
-        string fileName = "testEmployees.json";
+        string fileName = "fullEmployeesList_fixed.json";
         string filePath = Path.Combine(Application.dataPath, "JSONFILES", fileName);
         string json = File.ReadAllText(filePath);
         EmployeeData data = JsonUtility.FromJson<EmployeeData>(json);
